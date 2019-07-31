@@ -1,0 +1,20 @@
+
+# Python
+__pycache__
+*.pyc
+.pydevproject
+.pytest_cache
+
+# Eclipse
+.classpath
+.project
+.settings/
+.pydevproject
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store

@@ -1,0 +1,1 @@
+E:\windows>gcloud firebase test android run --app blackjack-release-signed.apk --test Test.apk --device model=Nexus5,version=21,orientation=landscape --directories-to-pull /sdcard/reportDir/test_script.log

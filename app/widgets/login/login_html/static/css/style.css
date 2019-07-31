@@ -1,0 +1,40 @@
+body {
+  background-color: #ccc;
+  background-image: url('../pics/background.png');
+}
+
+#login,
+#error {
+  position: absolute;
+  top: 100px;
+  padding: 0;
+  overflow: hidden;
+  width: 420px;
+  height: 405px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#error {
+  color: #1a75ee;
+}
+
+#error > * {
+  margin-top: 48px;
+}
+
+#error > div#info {
+  color: #0E78E6;
+}
+
+#error > a#confirm {
+  background-color: #0E78E6;
+  color: #FFFFFF;
+  border: none;
+  width: 320px;
+  height: 32px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+}
