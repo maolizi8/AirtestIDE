@@ -2,7 +2,6 @@
 # Python
 __pycache__
 *.pyc
-.pydevproject
 .pytest_cache
 
 # Eclipse
