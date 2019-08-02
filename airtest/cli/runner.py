@@ -56,7 +56,14 @@ class AirtestCase(unittest.TestCase):
         with open(pyfilepath, 'r', encoding="utf8") as f:
             code = f.read()
         pyfilepath = pyfilepath.encode(sys.getfilesystemencoding())
-
+        
+        print('<gql> runner>runTest>pyfilepath: ',pyfilepath)
+        print('<gql> runner>runTest>code: ',code)
+        print('<gql> runner>runTest>self.scope: ',self.scope)
+        log('<gql> runner>runTest>pyfilepath: ',pyfilepath)
+        log('<gql> runner>runTest>code: ',code)
+        log('<gql> runner>runTest>self.scope: ',self.scope)
+        
         try:
             exec(compile(code.encode("utf-8"), pyfilepath, 'exec'), self.scope)
         except Exception as err:

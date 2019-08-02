@@ -27,6 +27,7 @@ def runner_parser(ap=None):
     ap.add_argument("--device", help="connect dev by uri string, e.g. Android:///", nargs="?", action="append")
     ap.add_argument("--log", help="set log dir, default to be script dir", nargs="?", const=True)
     ap.add_argument("--recording", help="record screen when running", nargs="?", const=True)
+    print(' ap.script: ',ap.script)
     return ap
 
 
@@ -34,10 +35,10 @@ def cli_setup(args=None):
     """future api for setup env by cli"""
     if not args:
         if len(sys.argv) < 2:
-            print("no cmdline args")
+            print("    no cmdline args")
             return False
         args = sys.argv
-    print(args)
+    print('    args: ',args)
 
     ap = argparse.ArgumentParser()
     if "--report" in args:

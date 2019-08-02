@@ -40,6 +40,12 @@ def init_device(platform="Android", uuid=None, **kwargs):
         G.add_device(dev)
     return dev
 
+# def run_function(func, uri='Android:///', startapp=None, stop=False):
+#     """"""
+#     connect_device(uri)
+#     if startapp:
+#         start_app(startapp)
+#     func()
 
 def connect_device(uri):
     """
@@ -105,9 +111,19 @@ def auto_setup(basedir=None, devices=None, logdir=None, project_root=None):
     """
     if basedir:
         if os.path.isfile(basedir):
+            filename,ext = os.path.splitext(basedir)
+            # <GQL add>
+            print('    <gql> G.TEMPLATE')
+            temp_dir=os.path.join(basedir,filename)
+            if temp_dir not in G.TEMPLATE:
+                G.TEMPLATE.append(temp_dir)
             basedir = os.path.dirname(basedir)
         if basedir not in G.BASEDIR:
             G.BASEDIR.append(basedir)
+#         if os.path.isfile(basedir):
+#             basedir = os.path.dirname(basedir)
+#         if basedir not in G.BASEDIR:
+#             G.BASEDIR.append(basedir)
     if devices:
         for dev in devices:
             connect_device(dev)
@@ -208,11 +224,18 @@ def snapshot(filename=None, msg=""):
     :return: absolute path of the screenshot
     :platforms: Android, iOS, Windows
     """
+    
+    G.LOGGING.info('    snapshot>filename:',filename)
     if filename:
         if not os.path.isabs(filename):
-            logdir = ST.LOG_DIR or "."
+            
+            #logdir = ST.LOG_DIR or "."
+            #filename = os.path.join(logdir, filename)
+            logdir = G.TEMPLATE
             filename = os.path.join(logdir, filename)
+            print('  save snapshot:',filename)
         screen = G.DEVICE.snapshot(filename)
+        G.LOGGING.info('    snapshot>screen:',screen)
         return try_log_screen(screen)
     else:
         return try_log_screen()
@@ -253,6 +276,8 @@ def touch(v, times=1, **kwargs):
     :return: finial position to be clicked
     :platforms: Android, Windows, iOS
     """
+    print('    touch>v:',v)
+    G.LOGGING.info('    touch>v:',v)
     if isinstance(v, Template):
         pos = loop_find(v, timeout=ST.FIND_TIMEOUT)
     else:

@@ -1477,3 +1477,997 @@ airtest.core.error.DeviceConnectionError: "error: device '46709b100104' not foun
 2019-07-30 18:39:52,499 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14227
 2019-07-30 18:39:52,507 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:12841
 2019-07-30 18:39:52,517 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14947
+2019-07-31 19:51:09,828 - E:\mypython\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-07-31 19:53:44,670 - E:\mypython\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-07-31 19:53:57,198 - E:\mypython\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe kill-server
+2019-08-01 09:44:04,775 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 09:44:31,127 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-01 09:44:31,308 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 09:44:31,442 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-01 09:44:31,582 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-01 09:44:31,722 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 09:44:31,941 - version:5
+2019-08-01 09:44:31,941 - skip install minicap
+2019-08-01 09:44:31,941 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 09:44:32,144 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 09:44:33,267 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 09:44:34,048 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:15244 localabstract:minicap_15244
+2019-08-01 09:44:34,166 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 09:44:34,338 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_15244' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-01 09:44:34,494 - [minicap_server]b'PID: 8392'
+2019-08-01 09:44:34,494 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-01 09:44:34,494 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 09:44:34,510 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 09:44:34,541 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-01 09:44:34,541 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 09:44:34,541 - (1, 24, 8392, 1080, 1920, 325, 578, 0, 2)
+2019-08-01 09:44:34,541 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 09:44:34,572 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-01 09:44:34,728 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 09:44:34,869 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-01 09:44:35,041 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-01 09:44:35,181 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-01 09:44:35,356 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 09:44:35,535 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 09:44:35,684 - install_minitouch finished
+2019-08-01 09:44:35,685 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 09:44:35,905 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:19761 localabstract:minitouch_19761
+2019-08-01 09:44:36,014 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_19761' 2>&1
+2019-08-01 09:44:36,225 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-01 09:44:36,341 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-01 09:44:36,439 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-01 09:44:36,439 - [minitouch_server]b'Connection established'
+2019-08-01 09:44:36,439 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 8420\n'
+2019-08-01 10:40:28,347 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-01 10:40:28,508 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 10:40:28,656 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-01 10:40:28,812 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-01 10:40:28,937 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 10:40:29,093 - version:5
+2019-08-01 10:40:29,093 - skip install minicap
+2019-08-01 10:40:29,093 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:40:29,311 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 10:40:30,232 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 10:40:31,075 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:12200 localabstract:minicap_12200
+2019-08-01 10:40:31,195 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:40:31,386 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_12200' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-01 10:40:31,542 - [minicap_server]b'PID: 13594'
+2019-08-01 10:40:31,542 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-01 10:40:31,542 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 10:40:31,543 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 10:40:31,575 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-01 10:40:31,575 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 10:40:31,575 - (1, 24, 13594, 1080, 1920, 325, 578, 0, 2)
+2019-08-01 10:40:31,575 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 10:40:31,606 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-01 10:40:31,751 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 10:40:31,874 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-01 10:40:32,015 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-01 10:40:32,140 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-01 10:40:32,273 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 10:40:32,431 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 10:40:32,588 - install_minitouch finished
+2019-08-01 10:40:32,588 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:40:32,775 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:18611 localabstract:minitouch_18611
+2019-08-01 10:40:32,911 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_18611' 2>&1
+2019-08-01 10:40:33,145 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-01 10:40:33,464 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-01 10:40:33,620 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-01 10:40:33,620 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 13621\n'
+2019-08-01 10:40:33,636 - [minitouch_server]b'Connection established'
+2019-08-01 10:40:47,321 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:15244
+2019-08-01 10:40:47,321 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:19761
+2019-08-01 10:40:47,321 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:12200
+2019-08-01 10:40:47,336 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:18611
+2019-08-01 10:40:47,367 - orientationWatcher has ended
+2019-08-01 10:40:47,383 - orientationWatcher has ended
+2019-08-01 10:55:21,821 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:55:40,191 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:56:09,623 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:58:40,660 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:58:41,518 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:58:41,721 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:58:41,892 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 10:59:15,477 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b wait-for-device
+2019-08-01 10:59:19,766 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 10:59:20,019 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap
+2019-08-01 10:59:20,255 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap.so
+2019-08-01 10:59:20,492 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 10:59:20,837 - version:5
+2019-08-01 10:59:20,837 - skip install minicap
+2019-08-01 10:59:20,837 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:59:21,137 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 10:59:24,370 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 10:59:25,251 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19464 localabstract:minicap_19464
+2019-08-01 10:59:25,393 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:59:25,617 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_19464' -P 1440x2560@325x578/0 -l 2>&1
+2019-08-01 10:59:25,814 - [minicap_server]b'PID: 21318'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: Using projection 1440x2560@325x578/0'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 10:59:25,814 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 10:59:25,829 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 11061252 bytes for JPG encoder'
+2019-08-01 10:59:25,829 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 10:59:25,829 - (1, 24, 21318, 1440, 2560, 325, 578, 0, 2)
+2019-08-01 10:59:25,829 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 10:59:25,876 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.product.cpu.abi
+2019-08-01 10:59:26,063 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 10:59:26,278 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minitouch
+2019-08-01 10:59:26,418 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls -l /data/local/tmp/minitouch
+2019-08-01 10:59:26,654 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell rm /data/local/tmp/minitouch*
+2019-08-01 10:59:26,860 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 10:59:26,985 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 10:59:27,172 - install_minitouch finished
+2019-08-01 10:59:27,172 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 10:59:27,380 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19733 localabstract:minitouch_19733
+2019-08-01 10:59:27,490 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell /data/local/tmp/minitouch -n 'minitouch_19733' 2>&1
+2019-08-01 10:59:28,120 - [minitouch_server]b'Type B touch device sec_touchscreen (4095x4095 with 10 contacts) detected on /dev/input/event0 (score 25104)'
+2019-08-01 10:59:28,120 - minitouch header:b'v 1\n^ 10 4095 4095 0\n$ 21396\n'
+2019-08-01 10:59:28,120 - [minitouch_server]b'Connection established'
+2019-08-01 11:24:39,018 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19464
+2019-08-01 11:24:39,034 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19733
+2019-08-01 11:24:39,034 - orientationWatcher has ended
+2019-08-01 11:28:49,268 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 11:34:32,895 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 11:44:55,405 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b wait-for-device
+2019-08-01 11:44:55,554 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 11:44:55,810 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap
+2019-08-01 11:44:56,060 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap.so
+2019-08-01 11:44:56,278 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 11:44:56,465 - version:5
+2019-08-01 11:44:56,465 - skip install minicap
+2019-08-01 11:44:56,465 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:44:56,653 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 11:44:58,526 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 11:44:59,290 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19513 localabstract:minicap_19513
+2019-08-01 11:44:59,429 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:44:59,629 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_19513' -P 1440x2560@325x578/0 -l 2>&1
+2019-08-01 11:44:59,816 - [minicap_server]b'PID: 1019'
+2019-08-01 11:44:59,816 - [minicap_server]b'INFO: Using projection 1440x2560@325x578/0'
+2019-08-01 11:44:59,816 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 11:44:59,816 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 11:44:59,816 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 11:44:59,832 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 11:44:59,832 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 11:44:59,832 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 11:44:59,832 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 11:44:59,833 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 11061252 bytes for JPG encoder'
+2019-08-01 11:44:59,833 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 11:44:59,833 - (1, 24, 1019, 1440, 2560, 325, 578, 0, 2)
+2019-08-01 11:44:59,833 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 11:44:59,881 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.product.cpu.abi
+2019-08-01 11:45:00,084 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 11:45:00,271 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minitouch
+2019-08-01 11:45:00,442 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls -l /data/local/tmp/minitouch
+2019-08-01 11:45:00,630 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell rm /data/local/tmp/minitouch*
+2019-08-01 11:45:00,879 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 11:45:01,035 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 11:45:01,207 - install_minitouch finished
+2019-08-01 11:45:01,207 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:45:01,363 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19386 localabstract:minitouch_19386
+2019-08-01 11:45:01,456 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell /data/local/tmp/minitouch -n 'minitouch_19386' 2>&1
+2019-08-01 11:45:02,049 - [minitouch_server]b'Type B touch device sec_touchscreen (4095x4095 with 10 contacts) detected on /dev/input/event0 (score 25104)'
+2019-08-01 11:45:02,049 - minitouch header:b'v 1\n^ 10 4095 4095 0\n$ 1205\n'
+2019-08-01 11:45:02,049 - [minitouch_server]b'Connection established'
+2019-08-01 11:46:26,427 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:46:26,661 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:46:43,915 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:46:44,165 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:47:47,518 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:47:47,815 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:49:10,911 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:49:11,145 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:49:55,606 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:49:55,858 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:50:42,736 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:50:43,002 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:52:28,423 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:52:28,657 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:54:05,345 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:54:05,610 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:54:17,335 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:54:17,569 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:54:43,629 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:54:43,831 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:55:45,176 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:55:45,503 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:56:07,156 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:56:07,422 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:57:00,678 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:57:00,927 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:57:18,197 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:57:18,431 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:57:28,194 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:57:28,428 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 11:58:08,375 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 11:58:08,578 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 12:05:15,902 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 12:05:16,183 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1440x2560@1440x2560/0 -s
+2019-08-01 12:11:05,772 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell dumpsys activity top
+2019-08-01 12:11:06,133 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell dumpsys package com.netease.nie.yosemite
+2019-08-01 12:11:06,426 - local version code is 288, installed version code is 288
+2019-08-01 12:11:06,427 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell settings get secure default_input_method
+2019-08-01 12:11:08,173 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ime list -a
+2019-08-01 12:11:09,122 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell dumpsys package com.netease.open.pocoservice
+2019-08-01 12:11:09,341 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell dumpsys package com.netease.open.pocoservice.test
+2019-08-01 12:11:09,534 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:17465 tcp:10080
+2019-08-01 12:11:09,633 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:13635 tcp:10081
+2019-08-01 12:11:09,722 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ps
+2019-08-01 12:11:10,106 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell am force-stop com.netease.open.pocoservice
+2019-08-01 12:11:11,015 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell am start -n com.netease.open.pocoservice/.TestActivity
+2019-08-01 12:11:11,858 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell am instrument -w -e debug false -e class com.netease.open.pocoservice.InstrumentedTestAsLauncher com.netease.open.pocoservice.test/android.support.test.runner.AndroidJUnitRunner
+2019-08-01 12:20:13,241 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:20:14,960 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:27:44,862 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:27:52,962 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:41,998 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:42,709 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:43,101 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:43,359 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:43,539 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:37:44,067 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 12:52:15,106 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19513
+2019-08-01 12:52:15,110 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19386
+2019-08-01 12:52:15,118 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:17465
+2019-08-01 12:52:15,132 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:13635
+2019-08-01 12:52:15,144 - orientationWatcher has ended
+2019-08-01 12:52:26,399 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 13:40:14,599 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b wait-for-device
+2019-08-01 13:40:14,728 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 13:40:14,960 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap
+2019-08-01 13:40:15,161 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap.so
+2019-08-01 13:40:15,383 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 13:40:15,667 - version:5
+2019-08-01 13:40:15,668 - skip install minicap
+2019-08-01 13:40:15,669 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 13:40:15,905 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 13:40:18,830 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 13:40:20,341 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:18898 localabstract:minicap_18898
+2019-08-01 13:40:20,463 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 13:40:20,738 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_18898' -P 1440x2560@325x578/0 -l 2>&1
+2019-08-01 13:40:20,938 - [minicap_server]b'PID: 10772'
+2019-08-01 13:40:20,941 - [minicap_server]b'INFO: Using projection 1440x2560@325x578/0'
+2019-08-01 13:40:20,944 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 13:40:20,946 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 13:40:20,948 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 13:40:20,949 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 13:40:20,951 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 13:40:20,952 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 13:40:20,953 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 13:40:20,970 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 11061252 bytes for JPG encoder'
+2019-08-01 13:40:20,971 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 13:40:20,976 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 13:40:20,977 - (1, 24, 10772, 1440, 2560, 325, 578, 0, 2)
+2019-08-01 13:40:21,009 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.product.cpu.abi
+2019-08-01 13:40:21,218 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-01 13:40:21,523 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minitouch
+2019-08-01 13:40:21,717 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls -l /data/local/tmp/minitouch
+2019-08-01 13:40:21,937 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell rm /data/local/tmp/minitouch*
+2019-08-01 13:40:22,146 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 13:40:22,258 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 13:40:22,456 - install_minitouch finished
+2019-08-01 13:40:22,456 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 13:40:22,707 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19381 localabstract:minitouch_19381
+2019-08-01 13:40:22,812 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell /data/local/tmp/minitouch -n 'minitouch_19381' 2>&1
+2019-08-01 13:40:23,350 - [minitouch_server]b'Type B touch device sec_touchscreen (4095x4095 with 10 contacts) detected on /dev/input/event0 (score 25104)'
+2019-08-01 13:40:23,358 - minitouch header:b'v 1\n^ 10 4095 4095 0\n$ 10866\n'
+2019-08-01 13:40:23,359 - [minitouch_server]b'Connection established'
+2019-08-01 13:45:52,548 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 13:49:54,824 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 13:49:59,544 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 13:57:08,718 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell input keyevent HOME
+2019-08-01 14:31:45,219 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:15608 localabstract:minicap_15608
+2019-08-01 14:31:45,234 - orientationWatcher has ended
+2019-08-01 14:31:46,380 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:16337 localabstract:minicap_16337
+2019-08-01 14:31:46,459 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 14:31:46,648 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_16337' -P 1440x2560@325x578/0 -l 2>&1
+2019-08-01 14:31:46,771 - [minicap_server]b'PID: 24110'
+2019-08-01 14:31:46,772 - [minicap_server]b'INFO: Using projection 1440x2560@325x578/0'
+2019-08-01 14:31:46,773 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 14:31:46,774 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 14:31:46,775 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 14:31:46,775 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 14:31:46,776 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 14:31:46,777 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 14:31:46,778 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 14:31:46,785 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 11061252 bytes for JPG encoder'
+2019-08-01 14:31:46,787 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 14:31:46,790 - (1, 24, 24110, 1440, 2560, 325, 578, 0, 2)
+2019-08-01 14:31:46,791 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 15:00:32,482 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-01 15:00:32,620 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 15:00:32,779 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-01 15:00:32,923 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-01 15:00:33,044 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 15:00:33,217 - version:5
+2019-08-01 15:00:33,219 - skip install minicap
+2019-08-01 15:00:33,220 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:00:33,430 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 15:00:34,670 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 15:00:35,467 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:15162 localabstract:minicap_15162
+2019-08-01 15:00:35,624 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:00:35,780 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_15162' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-01 15:00:35,952 - [minicap_server]b'PID: 9261'
+2019-08-01 15:00:35,953 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-01 15:00:35,954 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 15:00:35,956 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 15:00:35,959 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 15:00:35,960 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 15:00:35,962 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 15:00:35,963 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 15:00:35,964 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 15:00:35,992 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-01 15:00:35,993 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 15:00:35,998 - (1, 24, 9261, 1080, 1920, 325, 578, 0, 2)
+2019-08-01 15:00:36,000 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 15:00:36,025 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-01 15:00:36,158 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 15:00:36,275 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-01 15:00:36,426 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-01 15:00:36,585 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-01 15:00:36,752 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 15:00:36,908 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 15:00:37,085 - install_minitouch finished
+2019-08-01 15:00:37,086 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:00:37,256 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:11462 localabstract:minitouch_11462
+2019-08-01 15:00:37,371 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_11462' 2>&1
+2019-08-01 15:00:37,557 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-01 15:00:37,706 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-01 15:00:37,797 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-01 15:00:37,801 - [minitouch_server]b'Connection established'
+2019-08-01 15:00:37,804 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 9290\n'
+2019-08-01 15:26:15,133 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell input keyevent HOME
+2019-08-01 15:27:23,687 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell input keyevent HOME
+2019-08-01 15:54:04,215 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:04,420 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:44,044 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:44,251 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:45,138 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:45,312 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:48,129 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:48,332 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:49,188 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:49,380 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:49,929 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:50,092 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:50,982 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:51,192 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:51,580 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:51,734 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:52,606 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:52,844 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:53,280 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:53,434 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:54:54,286 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:54:54,482 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:14,852 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:15,010 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:15,848 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:16,001 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:16,538 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:16,696 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:17,531 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:17,694 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:22,954 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:23,110 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:55:23,965 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 15:55:24,135 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-01 15:56:03,180 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell input keyevent HOME
+2019-08-01 16:29:07,892 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:18898
+2019-08-01 16:29:07,897 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19381
+2019-08-01 16:29:07,908 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:16337
+2019-08-01 16:29:07,917 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:15162
+2019-08-01 16:29:07,927 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:11462
+2019-08-01 16:29:07,974 - orientationWatcher has ended
+2019-08-01 16:29:26,976 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-01 16:30:21,569 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-01 16:30:21,708 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 16:30:21,882 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-01 16:30:22,038 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-01 16:30:22,217 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-01 16:30:22,424 - version:5
+2019-08-01 16:30:22,426 - skip install minicap
+2019-08-01 16:30:22,427 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 16:30:22,660 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-01 16:30:23,479 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-01 16:30:24,265 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:13971 localabstract:minicap_13971
+2019-08-01 16:30:24,443 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 16:30:24,630 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_13971' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-01 16:30:24,806 - [minicap_server]b'PID: 14362'
+2019-08-01 16:30:24,807 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-01 16:30:24,809 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-01 16:30:24,811 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-01 16:30:24,813 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-01 16:30:24,817 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-01 16:30:24,819 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-01 16:30:24,820 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-01 16:30:24,822 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-01 16:30:24,829 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-01 16:30:24,832 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-01 16:30:24,839 - (1, 24, 14362, 1080, 1920, 325, 578, 0, 2)
+2019-08-01 16:30:24,840 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-01 16:30:24,953 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-01 16:30:25,103 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-01 16:30:25,240 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-01 16:30:25,382 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-01 16:30:25,521 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-01 16:30:25,693 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-01 16:30:25,847 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-01 16:30:26,000 - install_minitouch finished
+2019-08-01 16:30:26,000 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-01 16:30:26,196 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:15774 localabstract:minitouch_15774
+2019-08-01 16:30:26,314 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_15774' 2>&1
+2019-08-01 16:30:26,543 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-01 16:30:26,644 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-01 16:30:26,744 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-01 16:30:26,749 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 14387\n'
+2019-08-01 16:30:26,754 - [minitouch_server]b'Connection established'
+2019-08-01 17:10:22,259 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:13971
+2019-08-01 17:10:22,266 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:15774
+2019-08-01 17:10:22,280 - orientationWatcher has ended
+2019-08-02 11:15:12,872 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 11:26:36,087 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 11:35:56,817 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 11:36:55,835 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 11:36:55,953 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:36:56,183 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 11:36:56,346 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 11:36:56,508 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 11:36:56,707 - version:5
+2019-08-02 11:36:56,708 - skip install minicap
+2019-08-02 11:36:56,709 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:36:57,285 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 11:36:58,420 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 11:36:59,216 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:18345 localabstract:minicap_18345
+2019-08-02 11:36:59,369 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:36:59,532 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_18345' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 11:36:59,664 - [minicap_server]b'PID: 9210'
+2019-08-02 11:36:59,667 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 11:36:59,668 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 11:36:59,668 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 11:36:59,670 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 11:36:59,671 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 11:36:59,672 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 11:36:59,672 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 11:36:59,673 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 11:36:59,686 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 11:36:59,686 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 11:36:59,691 - (1, 24, 9210, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 11:36:59,692 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 11:36:59,709 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 11:36:59,837 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:36:59,975 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 11:37:00,099 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 11:37:00,216 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 11:37:00,375 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 11:37:00,544 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 11:37:00,710 - install_minitouch finished
+2019-08-02 11:37:00,711 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:37:00,913 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:18995 localabstract:minitouch_18995
+2019-08-02 11:37:01,048 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_18995' 2>&1
+2019-08-02 11:37:01,307 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 11:37:01,746 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 11:37:02,205 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 11:37:02,210 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 9410\n'
+2019-08-02 11:37:02,214 - [minitouch_server]b'Connection established'
+2019-08-02 11:38:44,690 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:18345
+2019-08-02 11:38:44,696 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:18995
+2019-08-02 11:38:44,712 - orientationWatcher has ended
+2019-08-02 11:38:53,470 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 11:39:24,458 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 11:39:24,583 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:39:24,758 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 11:39:24,897 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 11:39:25,035 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 11:39:25,217 - version:5
+2019-08-02 11:39:25,218 - skip install minicap
+2019-08-02 11:39:25,220 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:39:25,435 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 11:39:26,470 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 11:39:27,217 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:12612 localabstract:minicap_12612
+2019-08-02 11:39:27,376 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:39:27,557 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_12612' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 11:39:27,740 - [minicap_server]b'PID: 9761'
+2019-08-02 11:39:27,743 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 11:39:27,744 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 11:39:27,744 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 11:39:27,745 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 11:39:27,745 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 11:39:27,746 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 11:39:27,747 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 11:39:27,748 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 11:39:27,765 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 11:39:27,767 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 11:39:27,771 - (1, 24, 9761, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 11:39:27,771 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 11:39:27,860 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 11:39:28,012 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:39:28,153 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 11:39:28,294 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 11:39:28,436 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 11:39:28,580 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 11:39:28,707 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 11:39:28,839 - install_minitouch finished
+2019-08-02 11:39:28,839 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:39:29,004 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:17969 localabstract:minitouch_17969
+2019-08-02 11:39:29,107 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_17969' 2>&1
+2019-08-02 11:39:29,406 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 11:39:29,528 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 11:39:29,638 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 11:39:29,643 - [minitouch_server]b'Connection established'
+2019-08-02 11:39:29,646 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 9787\n'
+2019-08-02 11:47:34,637 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:12612
+2019-08-02 11:47:34,647 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:17969
+2019-08-02 11:47:34,736 - orientationWatcher has ended
+2019-08-02 11:47:42,295 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 11:47:54,020 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 11:47:54,145 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:47:54,298 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 11:47:54,453 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 11:47:54,613 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 11:47:54,808 - version:5
+2019-08-02 11:47:54,809 - skip install minicap
+2019-08-02 11:47:54,809 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:47:54,981 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 11:47:55,782 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 11:47:56,561 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:18913 localabstract:minicap_18913
+2019-08-02 11:47:56,701 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:47:56,877 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_18913' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 11:47:57,040 - [minicap_server]b'PID: 10346'
+2019-08-02 11:47:57,041 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 11:47:57,047 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 11:47:57,048 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 11:47:57,049 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 11:47:57,051 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 11:47:57,052 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 11:47:57,053 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 11:47:57,055 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 11:47:57,058 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 11:47:57,062 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 11:47:57,069 - (1, 24, 10346, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 11:47:57,070 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 11:47:57,176 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 11:47:57,329 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 11:47:57,476 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 11:47:57,596 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 11:47:57,726 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 11:47:57,869 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 11:47:57,971 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 11:47:58,095 - install_minitouch finished
+2019-08-02 11:47:58,095 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:47:58,253 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:19613 localabstract:minitouch_19613
+2019-08-02 11:47:58,362 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_19613' 2>&1
+2019-08-02 11:47:58,577 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 11:47:58,706 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 11:47:58,847 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 11:47:58,854 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 10372\n'
+2019-08-02 11:47:58,856 - [minitouch_server]b'Connection established'
+2019-08-02 11:48:50,811 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 11:48:50,978 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-02 11:56:32,896 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:18913
+2019-08-02 11:56:32,904 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:19613
+2019-08-02 11:56:32,956 - orientationWatcher has ended
+2019-08-02 12:01:39,685 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 12:01:54,363 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 12:01:54,502 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:01:54,638 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 12:01:54,749 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 12:01:54,858 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 12:01:54,992 - version:5
+2019-08-02 12:01:54,993 - skip install minicap
+2019-08-02 12:01:54,994 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:01:55,152 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 12:01:55,948 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 12:01:56,784 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:13527 localabstract:minicap_13527
+2019-08-02 12:01:56,945 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:01:57,101 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_13527' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 12:01:57,254 - [minicap_server]b'PID: 11323'
+2019-08-02 12:01:57,255 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 12:01:57,256 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 12:01:57,259 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 12:01:57,261 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 12:01:57,263 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 12:01:57,266 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 12:01:57,267 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 12:01:57,271 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 12:01:57,283 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 12:01:57,284 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 12:01:57,291 - (1, 24, 11323, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 12:01:57,292 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 12:01:57,316 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 12:01:57,468 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:01:57,670 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 12:01:57,813 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 12:01:57,949 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 12:01:58,115 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 12:01:58,273 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 12:01:58,411 - install_minitouch finished
+2019-08-02 12:01:58,411 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:01:58,589 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:14873 localabstract:minitouch_14873
+2019-08-02 12:01:58,701 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_14873' 2>&1
+2019-08-02 12:01:58,923 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 12:01:59,203 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 12:01:59,326 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 12:01:59,335 - [minitouch_server]b'Connection established'
+2019-08-02 12:01:59,338 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 11349\n'
+2019-08-02 12:02:05,726 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:02:05,895 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-02 12:10:30,121 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:10:30,279 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-02 12:20:08,107 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:13527
+2019-08-02 12:20:08,112 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14873
+2019-08-02 12:20:08,121 - orientationWatcher has ended
+2019-08-02 12:20:23,554 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 12:36:59,094 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 12:36:59,234 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:36:59,353 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 12:36:59,465 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 12:36:59,579 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 12:36:59,719 - version:5
+2019-08-02 12:36:59,720 - skip install minicap
+2019-08-02 12:36:59,720 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:36:59,883 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 12:37:00,684 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 12:37:01,500 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:17235 localabstract:minicap_17235
+2019-08-02 12:37:01,618 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:37:01,765 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_17235' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 12:37:01,904 - [minicap_server]b'PID: 13494'
+2019-08-02 12:37:01,905 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 12:37:01,906 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 12:37:01,907 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 12:37:01,907 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 12:37:01,909 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 12:37:01,911 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 12:37:01,912 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 12:37:01,913 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 12:37:01,924 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 12:37:01,925 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 12:37:01,929 - (1, 24, 13494, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 12:37:01,930 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 12:37:02,030 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 12:37:02,168 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:37:02,298 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 12:37:02,430 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 12:37:02,567 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 12:37:02,798 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 12:37:02,968 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 12:37:03,116 - install_minitouch finished
+2019-08-02 12:37:03,117 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:37:03,307 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:15404 localabstract:minitouch_15404
+2019-08-02 12:37:03,474 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_15404' 2>&1
+2019-08-02 12:37:03,714 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 12:37:04,003 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 12:37:04,333 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 12:37:04,338 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 13519\n'
+2019-08-02 12:37:04,341 - [minitouch_server]b'Connection established'
+2019-08-02 12:44:09,221 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:44:09,410 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-02 12:46:53,981 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:17235
+2019-08-02 12:46:53,992 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:15404
+2019-08-02 12:46:54,006 - orientationWatcher has ended
+2019-08-02 12:47:55,950 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 12:48:54,986 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 12:48:55,120 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:48:55,276 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 12:48:55,414 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 12:48:55,560 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 12:48:55,710 - version:5
+2019-08-02 12:48:55,711 - skip install minicap
+2019-08-02 12:48:55,712 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:48:55,902 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 12:48:56,842 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 12:48:57,645 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:14260 localabstract:minicap_14260
+2019-08-02 12:48:57,798 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:48:57,964 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_14260' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 12:48:58,139 - [minicap_server]b'PID: 14338'
+2019-08-02 12:48:58,140 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 12:48:58,142 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 12:48:58,145 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 12:48:58,146 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 12:48:58,148 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 12:48:58,154 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 12:48:58,156 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 12:48:58,158 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 12:48:58,161 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 12:48:58,165 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 12:48:58,173 - (1, 24, 14338, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 12:48:58,175 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 12:48:58,272 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 12:48:58,411 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 12:48:58,539 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 12:48:58,669 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 12:48:58,792 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 12:48:58,915 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 12:48:59,046 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 12:48:59,193 - install_minitouch finished
+2019-08-02 12:48:59,193 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 12:48:59,366 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:14625 localabstract:minitouch_14625
+2019-08-02 12:48:59,461 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_14625' 2>&1
+2019-08-02 12:48:59,662 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 12:48:59,761 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 12:48:59,883 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 12:48:59,890 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 14363\n'
+2019-08-02 12:48:59,893 - [minitouch_server]b'Connection established'
+2019-08-02 13:05:05,496 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14260
+2019-08-02 13:05:05,504 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14625
+2019-08-02 13:05:05,525 - orientationWatcher has ended
+2019-08-02 13:05:18,757 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 13:08:01,482 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 13:08:01,612 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 13:08:01,774 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 13:08:01,949 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 13:08:02,139 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 13:08:02,297 - version:5
+2019-08-02 13:08:02,298 - skip install minicap
+2019-08-02 13:08:02,299 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 13:08:02,496 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 13:08:03,318 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 13:08:04,115 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:16425 localabstract:minicap_16425
+2019-08-02 13:08:04,272 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 13:08:04,447 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_16425' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 13:08:04,612 - [minicap_server]b'PID: 15669'
+2019-08-02 13:08:04,613 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 13:08:04,615 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 13:08:04,615 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 13:08:04,616 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 13:08:04,617 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 13:08:04,618 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 13:08:04,619 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 13:08:04,619 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 13:08:04,634 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 13:08:04,635 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 13:08:04,641 - (1, 24, 15669, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 13:08:04,643 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 13:08:04,752 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 13:08:04,916 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 13:08:05,057 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 13:08:05,177 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 13:08:05,317 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 13:08:05,452 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 13:08:05,564 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 13:08:05,686 - install_minitouch finished
+2019-08-02 13:08:05,686 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 13:08:05,843 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:16697 localabstract:minitouch_16697
+2019-08-02 13:08:05,949 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_16697' 2>&1
+2019-08-02 13:08:06,139 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 13:08:06,228 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 13:08:06,309 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 13:08:06,313 - [minitouch_server]b'Connection established'
+2019-08-02 13:08:06,313 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 15695\n'
+2019-08-02 13:10:47,584 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:16425
+2019-08-02 13:10:47,590 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:16697
+2019-08-02 13:10:47,603 - orientationWatcher has ended
+2019-08-02 14:38:03,970 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 16:56:40,938 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 16:58:07,265 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 16:58:08,781 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b wait-for-device
+2019-08-02 16:58:08,910 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-02 16:58:09,156 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap
+2019-08-02 16:58:09,343 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minicap.so
+2019-08-02 16:58:09,515 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 16:58:09,735 - version:5
+2019-08-02 16:58:09,735 - skip install minicap
+2019-08-02 16:58:09,735 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:09,954 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 16:58:11,564 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 16:58:12,361 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:16651 localabstract:minicap_16651
+2019-08-02 16:58:12,494 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:12,761 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_16651' -P 1440x2560@325x578/0 -l 2>&1
+2019-08-02 16:58:13,323 - [minicap_server]b'PID: 8178'
+2019-08-02 16:58:13,323 - [minicap_server]b'INFO: Using projection 1440x2560@325x578/0'
+2019-08-02 16:58:13,323 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 11061252 bytes for JPG encoder'
+2019-08-02 16:58:13,495 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 16:58:13,557 - (1, 24, 8178, 1440, 2560, 325, 578, 0, 2)
+2019-08-02 16:58:13,557 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 16:58:13,574 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.product.cpu.abi
+2019-08-02 16:58:13,868 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell getprop ro.build.version.sdk
+2019-08-02 16:58:14,022 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls /data/local/tmp/minitouch
+2019-08-02 16:58:14,241 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell ls -l /data/local/tmp/minitouch
+2019-08-02 16:58:14,479 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell rm /data/local/tmp/minitouch*
+2019-08-02 16:58:14,608 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 16:58:14,747 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 16:58:15,024 - install_minitouch finished
+2019-08-02 16:58:15,024 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:15,698 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --no-rebind tcp:19817 localabstract:minitouch_19817
+2019-08-02 16:58:15,945 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b shell /data/local/tmp/minitouch -n 'minitouch_19817' 2>&1
+2019-08-02 16:58:16,535 - [minitouch_server]b'Type B touch device sec_touchscreen (4095x4095 with 10 contacts) detected on /dev/input/event0 (score 25104)'
+2019-08-02 16:58:16,540 - minitouch header:b'v 1\n^ 10 4095 4095 0\n$ 8414\n'
+2019-08-02 16:58:16,540 - [minitouch_server]b'Connection established'
+2019-08-02 16:58:27,856 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 16:58:28,007 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 16:58:28,180 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 16:58:28,337 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 16:58:28,524 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 16:58:28,712 - version:5
+2019-08-02 16:58:28,712 - skip install minicap
+2019-08-02 16:58:28,712 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:28,915 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 16:58:29,818 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 16:58:30,592 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:17945 localabstract:minicap_17945
+2019-08-02 16:58:30,750 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:30,941 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_17945' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 16:58:31,331 - [minicap_server]b'PID: 30296'
+2019-08-02 16:58:31,331 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 16:58:31,331 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 16:58:31,362 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 16:58:31,377 - (1, 24, 30296, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 16:58:31,377 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 16:58:31,394 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 16:58:31,697 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 16:58:32,049 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 16:58:32,223 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 16:58:32,367 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 16:58:32,495 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 16:58:32,641 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 16:58:32,918 - install_minitouch finished
+2019-08-02 16:58:32,920 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 16:58:33,156 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:12355 localabstract:minitouch_12355
+2019-08-02 16:58:33,242 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_12355' 2>&1
+2019-08-02 16:58:33,433 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 16:58:33,527 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 16:58:33,605 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 16:58:33,621 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 30320\n'
+2019-08-02 16:58:33,621 - [minitouch_server]b'Connection established'
+2019-08-02 17:00:41,323 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 17:00:41,460 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:01:09,430 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 17:01:09,591 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:01:40,100 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 17:01:40,307 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:01:47,268 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 17:01:47,373 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:05:03,161 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:16651
+2019-08-02 17:05:03,162 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 02157df271610a1b forward --remove tcp:19817
+2019-08-02 17:05:03,162 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:17945
+2019-08-02 17:05:03,263 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:12355
+2019-08-02 17:05:03,295 - orientationWatcher has ended
+2019-08-02 17:05:03,302 - orientationWatcher has ended
+2019-08-02 17:05:55,518 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 17:07:36,663 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 17:28:28,852 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 17:33:11,430 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 17:33:11,610 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:33:11,760 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 17:33:11,885 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 17:33:12,010 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 17:33:12,166 - version:5
+2019-08-02 17:33:12,166 - skip install minicap
+2019-08-02 17:33:12,166 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 17:33:12,353 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 17:33:13,164 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 17:33:13,945 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:19194 localabstract:minicap_19194
+2019-08-02 17:33:14,129 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 17:33:14,307 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_19194' -P 1080x1920@325x578/0 -l 2>&1
+2019-08-02 17:33:14,445 - [minicap_server]b'PID: 32623'
+2019-08-02 17:33:14,445 - [minicap_server]b'INFO: Using projection 1080x1920@325x578/0'
+2019-08-02 17:33:14,445 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 17:33:14,460 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 17:33:14,476 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 17:33:14,476 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 17:33:14,492 - (1, 24, 32623, 1080, 1920, 325, 578, 0, 2)
+2019-08-02 17:33:14,492 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 17:33:14,576 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.product.cpu.abi
+2019-08-02 17:33:14,732 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 17:33:14,856 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls /data/local/tmp/minitouch
+2019-08-02 17:33:14,997 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell ls -l /data/local/tmp/minitouch
+2019-08-02 17:33:15,112 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell rm /data/local/tmp/minitouch*
+2019-08-02 17:33:15,272 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 push E:\\AirtestIDE\\airtest\\core\\android\\static\\stf_libs\\arm64-v8a\\minitouch /data/local/tmp/minitouch
+2019-08-02 17:33:15,428 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell chmod 755 /data/local/tmp/minitouch
+2019-08-02 17:33:15,600 - install_minitouch finished
+2019-08-02 17:33:15,600 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 17:33:15,743 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --no-rebind tcp:15564 localabstract:minitouch_15564
+2019-08-02 17:33:15,868 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell /data/local/tmp/minitouch -n 'minitouch_15564' 2>&1
+2019-08-02 17:33:16,040 - [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+2019-08-02 17:33:16,262 - [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+2019-08-02 17:33:16,637 - [minitouch_server]b'Type B touch device ft5435_ts (1080x1920 with 10 contacts) detected on /dev/input/event1 (score 22449)'
+2019-08-02 17:33:16,652 - minitouch header:b'v 1\n^ 10 1080 1920 0\n$ 32649\n'
+2019-08-02 17:33:16,652 - [minitouch_server]b'Connection established'
+2019-08-02 18:00:45,826 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:19194
+2019-08-02 18:00:45,834 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:15564
+2019-08-02 18:00:45,846 - orientationWatcher has ended
+2019-08-02 18:16:01,374 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 18:21:51,284 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 18:21:51,506 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 18:21:51,590 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 wait-for-device
+2019-08-02 18:21:51,678 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 18:22:11,031 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 18:22:11,170 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-02 18:22:11,265 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 wait-for-device
+2019-08-02 18:22:11,356 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 18:22:11,506 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 wait-for-device
+2019-08-02 18:22:11,601 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell getprop ro.build.version.sdk
+2019-08-02 18:22:11,748 - Device:46709b100104 updated <airtest.core.android.android.Android object at 0x0000000010DB8E10> -> <airtest.core.android.android.Android object at 0x000000001C16D2B0>
+2019-08-02 18:22:11,750 - using path: E:/mypython/airtest_ui_autotest/business/home_page.air
+2019-08-02 18:22:11,776 - Try finding:
+Template(E:/mypython/airtest_ui_autotest/business/home_page.air\tpl1563958466577.png)
+2019-08-02 18:22:11,778 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell pm path jp.co.cyberagent.stf.rotationwatcher
+2019-08-02 18:22:12,594 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell export CLASSPATH=/data/app/jp.co.cyberagent.stf.rotationwatcher-1/base.apk;exec app_process /system/bin jp.co.cyberagent.stf.rotationwatcher.RotationWatcher
+2019-08-02 18:22:13,366 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell ls /data/local/tmp/minicap
+2019-08-02 18:22:13,546 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell ls /data/local/tmp/minicap.so
+2019-08-02 18:22:13,688 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+2019-08-02 18:22:13,848 - version:5
+2019-08-02 18:22:13,849 - skip install minicap
+2019-08-02 18:22:13,849 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 forward --no-rebind tcp:14459 localabstract:minicap_14459
+2019-08-02 18:22:13,949 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 18:22:14,168 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_14459' -P 1080x1920@1080x1920/0 -l 2>&1
+2019-08-02 18:22:14,341 - [minicap_server]b'PID: 3345'
+2019-08-02 18:22:14,345 - [minicap_server]b'INFO: Using projection 1080x1920@1080x1920/0'
+2019-08-02 18:22:14,346 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:240) Creating SurfaceComposerClient'
+2019-08-02 18:22:14,347 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:243) Performing SurfaceComposerClient init check'
+2019-08-02 18:22:14,349 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:250) Creating virtual display'
+2019-08-02 18:22:14,353 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:256) Creating buffer queue'
+2019-08-02 18:22:14,353 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:261) Creating CPU consumer'
+2019-08-02 18:22:14,354 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:265) Creating frame waiter'
+2019-08-02 18:22:14,356 - [minicap_server]b'INFO: (external/MY_minicap/src/minicap_24.cpp:269) Publishing virtual display'
+2019-08-02 18:22:14,371 - [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 6268932 bytes for JPG encoder'
+2019-08-02 18:22:14,374 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:473) Server start'
+2019-08-02 18:22:14,383 - (1, 24, 3345, 1080, 1920, 1080, 1920, 0, 2)
+2019-08-02 18:22:14,390 - [minicap_server]b'INFO: (/home/lxn3032/minicap_for_ide/jni/minicap/minicap.cpp:475) New client connection'
+2019-08-02 18:22:14,781 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-02 18:22:14,977 - try match with SURFMatching
+2019-08-02 18:22:16,690 - find_best_result() run time is 1.71 s.
+2019-08-02 18:22:16,691 - try match with TemplateMatching
+2019-08-02 18:22:16,995 - [Template] threshold=0.7, result={'result': (920, 1787), 'rectangle': ((853, 1724), (853, 1851), (987, 1851), (987, 1724)), 'confidence': 0.4601607620716095}
+2019-08-02 18:22:16,996 - find_best_result() run time is 0.30 s.
+2019-08-02 18:22:16,997 - try match with BRISKMatching
+2019-08-02 18:22:17,412 - find_best_result() run time is 0.41 s.
+2019-08-02 18:22:17,419 - match result: None
+2019-08-02 18:22:18,028 - try match with SURFMatching
+2019-08-02 18:22:18,856 - find_best_result() run time is 0.83 s.
+2019-08-02 18:22:18,857 - try match with TemplateMatching
+2019-08-02 18:22:19,019 - [Template] threshold=0.7, result={'result': (920, 1787), 'rectangle': ((853, 1724), (853, 1851), (987, 1851), (987, 1724)), 'confidence': 0.4601607620716095}
+2019-08-02 18:22:19,022 - find_best_result() run time is 0.16 s.
+2019-08-02 18:22:19,024 - try match with BRISKMatching
+2019-08-02 18:22:19,362 - find_best_result() run time is 0.34 s.
+2019-08-02 18:22:19,369 - match result: None
+2019-08-02 18:22:20,020 - try match with SURFMatching
+2019-08-02 18:22:20,884 - find_best_result() run time is 0.86 s.
+2019-08-02 18:22:20,885 - try match with TemplateMatching
+2019-08-02 18:22:21,034 - [Template] threshold=0.7, result={'result': (920, 1787), 'rectangle': ((853, 1724), (853, 1851), (987, 1851), (987, 1724)), 'confidence': 0.4601607620716095}
+2019-08-02 18:22:21,035 - find_best_result() run time is 0.15 s.
+2019-08-02 18:22:21,036 - try match with BRISKMatching
+2019-08-02 18:22:21,379 - find_best_result() run time is 0.34 s.
+2019-08-02 18:22:21,385 - match result: None
+2019-08-02 18:22:22,038 - try match with SURFMatching
+2019-08-02 18:22:22,938 - find_best_result() run time is 0.90 s.
+2019-08-02 18:22:22,939 - try match with TemplateMatching
+2019-08-02 18:22:23,061 - [Template] threshold=0.7, result={'result': (920, 1787), 'rectangle': ((853, 1724), (853, 1851), (987, 1851), (987, 1724)), 'confidence': 0.4601607620716095}
+2019-08-02 18:22:23,063 - find_best_result() run time is 0.12 s.
+2019-08-02 18:22:23,064 - try match with BRISKMatching
+2019-08-02 18:22:23,405 - find_best_result() run time is 0.34 s.
+2019-08-02 18:22:23,411 - match result: None
+2019-08-02 18:45:31,210 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -s 46709b100104 forward --remove tcp:14459
+2019-08-02 18:46:37,113 - E:\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices

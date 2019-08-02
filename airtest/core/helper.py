@@ -12,6 +12,7 @@ from airtest.utils.logger import get_logger
 class G(object):
     """Represent the globals variables"""
     BASEDIR = []
+    TEMPLATE = []
     LOGGER = AirtestLogger(None)
     LOGGING = get_logger("airtest.core.api")
     SCREEN = None

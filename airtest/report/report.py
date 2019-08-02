@@ -28,6 +28,8 @@ STATIC_DIR = os.path.dirname(__file__)
 _paragraph_re = re.compile(r'(?:\r\n|\r|\n){2,}')
 
 
+print('    airtest>report>report.py>>>')
+
 @evalcontextfilter
 def nl2br(eval_ctx, value):
     result = u'\n\n'.join(u'<p>%s</p>' % p.replace('\n', '<br>\n')
@@ -304,6 +306,7 @@ class LogToHtml(object):
         )
         env.filters['nl2br'] = nl2br
         env.filters['datetime'] = timefmt
+        #env.filters['datetime'] = datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S")
         template = env.get_template(template_name)
         html = template.render(**template_vars)
 

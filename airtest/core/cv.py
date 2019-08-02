@@ -53,6 +53,7 @@ def loop_find(query, timeout=ST.FIND_TIMEOUT, threshold=None, interval=0.5, inte
         been found in screenshot
 
     """
+    print('    loop_find>query: ',query)
     G.LOGGING.info("Try finding:\n%s", query)
     start_time = time.time()
     while True:
@@ -91,12 +92,16 @@ def try_log_screen(screen=None):
         None
 
     """
-    if not ST.LOG_DIR:
+    G.LOGGING.info('    try_log_screen>screen:',screen)
+#     if not ST.LOG_DIR:
+#         return
+    if not G.TEMPLATE:
         return
     if screen is None:
         screen = G.DEVICE.snapshot()
     filename = "%(time)d.jpg" % {'time': time.time() * 1000}
-    filepath = os.path.join(ST.LOG_DIR, filename)
+    #filepath = os.path.join(ST.LOG_DIR, filename)
+    filepath = os.path.join(G.TEMPLATE, filename)
     aircv.imwrite(filepath, screen)
     return filename
 
@@ -120,15 +125,37 @@ class Template(object):
         self.resolution = resolution
         self.rgb = rgb
 
+#     @property
+#     def filepath(self):
+#         if self._filepath:
+#             return self._filepath
+#         for dirname in G.BASEDIR:
+#             filepath = os.path.join(dirname, self.filename)
+#             if os.path.isfile(filepath):
+#                 self._filepath = filepath
+#                 return self._filepath
+#         return self.filename
     @property
     def filepath(self):
+        print('airtest>core>cv>filepath> ST: ',ST)
         if self._filepath:
+            print('   if> self._filepath: ',self._filepath)
             return self._filepath
-        for dirname in G.BASEDIR:
+        
+        print('    self.filename: ',self.filename)
+        print('    G.BASEDIR: ',G.BASEDIR)
+        # <GQL add>
+        print('<gql> filepath TEMPLATE')
+        
+        #for dirname in G.BASEDIR:
+        for dirname in G.TEMPLATE:
             filepath = os.path.join(dirname, self.filename)
+            print('    filepath: ',filepath)
             if os.path.isfile(filepath):
                 self._filepath = filepath
                 return self._filepath
+        
+        print('      return>self.filename: ',self.filename)
         return self.filename
 
     def __repr__(self):
@@ -180,6 +207,7 @@ class Template(object):
             return ret
 
     def _imread(self):
+        print('    _imread>self.filepath: ',self.filepath)
         return aircv.imread(self.filepath)
 
     def _find_all_template(self, image, screen):
