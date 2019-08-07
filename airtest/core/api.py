@@ -61,7 +61,6 @@ def connect_device(uri):
     if host:
         params["host"] = host.split(":")
     dev = init_device(platform, uuid, **params)
-    print('    dev:',dev)
     return dev
 
 
@@ -107,29 +106,17 @@ def auto_setup(basedir=None, devices=None, logdir=None, project_root=None):
     if basedir:
         
         if os.path.isfile(basedir):
-            # <GQL add>
-            #filename,ext = os.path.splitext(basedir)
-            #print('<gql> G.TEMPLATE')
-            #temp_dir=os.path.join(basedir,filename)
-            #if temp_dir not in G.TEMPLATE:
-            #    G.TEMPLATE.append(temp_dir)
-            
             basedir = os.path.dirname(basedir)
         if basedir not in G.BASEDIR:
             G.BASEDIR.append(basedir)
     
-    # <>
-#     if not devices:
-#         #devices=['android:///']
-#         devices=['Android://127.0.0.1:5037/46709b100104']
-#         #print('auto_setup: devices>',devices)    
-        
     if devices:
         for dev in devices:
             connect_device(dev)
     if logdir:
         logdir = script_log_dir(basedir, logdir)
-        print('    <airtest.core.api>logdir:',logdir)
+        G.LOGGING.debug('logdir: %s' % logdir)
+        
         set_logdir(logdir)
     if project_root:
         ST.PROJECT_ROOT = project_root
@@ -232,7 +219,7 @@ def snapshot(filename=None, msg=""):
             #filename = os.path.join(logdir, filename)
             logdir = G.TEMPLATE
             filename = os.path.join(logdir, filename)
-            print('  save snapshot:',filename)
+            G.LOGGING.debug('save snapshot: %s' % filename)
         screen = G.DEVICE.snapshot(filename)
         return try_log_screen(screen)
     else:
@@ -386,6 +373,7 @@ def text(text, enter=True, **kwargs):
     :platforms: Android, Windows, iOS
     """
     print('    输入：',text)
+    G.LOGGING.info('input text: %s' % text)
     G.DEVICE.text(text, enter=enter, **kwargs)
     delay_after_operation()
 

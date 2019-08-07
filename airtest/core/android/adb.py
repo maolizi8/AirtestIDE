@@ -58,9 +58,11 @@ class ADB(object):
         machine = platform.machine()
         adb_path = DEFAULT_ADB_PATH.get('{}-{}'.format(system, machine))
         
-        print('adb_path: ',adb_path)
+        if adb_path:
+            LOGGING.debug('system DEFAULT_ADB_PATH: %s' % adb_path)
         if not adb_path:
             adb_path = DEFAULT_ADB_PATH.get(system)
+            LOGGING.debug('set adb_path: %s' % adb_path)
         if not adb_path:
             raise RuntimeError("No adb executable supports this platform({}-{}).".format(system, machine))
 

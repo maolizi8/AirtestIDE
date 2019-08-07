@@ -2,7 +2,6 @@
 from airtest.utils.resolution import cocos_min_strategy
 import os
 
-print('airtest>core>settings: ',os.environ.get("PROJECT_ROOT", ""))
 
 class Settings(object):
 

@@ -54,7 +54,7 @@ def loop_find(query, timeout=ST.FIND_TIMEOUT, threshold=None, interval=0.5, inte
 
     """
     G.LOGGING.info("Try finding:\n%s", query)
-    print("    Try finding:\n", query)
+    #print("    Try finding:\n", query)
     start_time = time.time()
     while True:
         screen = G.DEVICE.snapshot(filename=None)
@@ -123,25 +123,25 @@ class Template(object):
 
     @property
     def filepath(self):
-        print('    <airtest.core.cv>filepath ST: ',ST)
+        #print('    <airtest.core.cv>filepath ST: ',ST)
         if self._filepath:
-            print('   if> self._filepath: ',self._filepath)
+            #print('   if> self._filepath: ',self._filepath)
             return self._filepath
         
-        print('    self.filename: ',self.filename)
-        print('    G.BASEDIR: ',G.BASEDIR)
+        #print('    self.filename: ',self.filename)
+        #print('    G.BASEDIR: ',G.BASEDIR)
         # <GQL add>
-        print('    <gql> filepath TEMPLATE')
+        #print('    <gql> filepath TEMPLATE')
         
         #for dirname in G.TEMPLATE:
         for dirname in G.BASEDIR:
             filepath = os.path.join(dirname, self.filename)
-            print('    filepath: ',filepath)
+            #print('    filepath: ',filepath)
             if os.path.isfile(filepath):
                 self._filepath = filepath
                 return self._filepath
         
-        print('      return>self.filename: ',self.filename)
+        #print('      return>self.filename: ',self.filename)
         return self.filename
 
     def __repr__(self):
@@ -150,7 +150,7 @@ class Template(object):
 
     def match_in(self, screen):
         match_result = self._cv_match(screen)
-        G.LOGGING.debug("match result: %s", match_result)
+        G.LOGGING.info("match result: %s", match_result)
         if not match_result:
             return None
         focus_pos = TargetPos().getXY(match_result, self.target_pos)

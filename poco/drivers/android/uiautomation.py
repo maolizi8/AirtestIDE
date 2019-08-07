@@ -154,18 +154,18 @@ class AndroidUiautomationPoco(Poco):
             self.screenshot_each_action = False
 
         self.device = device or current_device()
-        print('    poco>device: ',self.device)
         
         if not self.device:
             self.device = connect_device("Android:///")
-
+        #print('poco connect device: ',self.device)
+        
         self.adb_client = self.device.adb
         if using_proxy:
             self.device_ip = self.adb_client.host or "127.0.0.1"
         else:
             self.device_ip = self.device.get_ip_address()
             
-        print('    poco>self.device_ip: ',self.device_ip)
+        #print('poco connect ip: ',self.device_ip)
         
         # save current top activity (@nullable)
         current_top_activity_package = self.device.get_top_activity_name()
@@ -215,14 +215,14 @@ class AndroidUiautomationPoco(Poco):
 
         endpoint = "http://{}:{}".format(self.device_ip, p1)
         agent = AndroidPocoAgent(endpoint, self.ime, use_airtest_input)
-        print('    <poco.drivers.android.uiautomation>AndroidPocoAgent: ',endpoint)
+        print('    poco AndroidPocoAgent: %s ' % endpoint)
         super(AndroidUiautomationPoco, self).__init__(agent, **options)
 
     def _install_service(self):
         updated = install(self.adb_client, os.path.join(this_dir, 'lib', 'pocoservice-debug.apk'))
-        print('    <poco.drivers.android.uiautomation>install pocoservice-debug.apk')
+        #print('install pocoservice-debug.apk')
         install(self.adb_client, os.path.join(this_dir, 'lib', 'pocoservice-debug-androidTest.apk'), updated)
-        print('    <poco.drivers.android.uiautomation>install pocoservice-debug-androidTest.apk')
+        #print('install pocoservice-debug-androidTest.apk')
         return updated
 
     def _is_running(self, package_name):

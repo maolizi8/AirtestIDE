@@ -17,6 +17,7 @@ from airtest.cli.info import get_script_info
 from six import PY3
 from pprint import pprint
 
+fname = __name__
 LOGDIR = "log"
 LOGFILE = "log.txt"
 HTML_TPL = "log_template.html"
@@ -65,8 +66,8 @@ class LogToHtml(object):
 
     def _load(self):
         logfile = self.logfile.encode(sys.getfilesystemencoding()) if not PY3 else self.logfile
-        print('    report logfile: ',logfile)
-        print('    report logfile exists: ',os.path.exists(logfile))
+        #print('    report logfile: ',logfile)
+        #print('    report logfile exists: ',os.path.exists(logfile))
         if os.path.exists(logfile):
             with io.open(logfile, encoding="utf-8") as f:
                 for line in f.readlines():
@@ -296,11 +297,11 @@ class LogToHtml(object):
         env.filters['nl2br'] = nl2br
         template = env.get_template(template_name)
         html = template.render(**template_vars)
-        print('    <airtest.report.report>report write(html)')
+        #print('    <airtest.report.report>report write(html)')
         if output_file:
             with io.open(output_file, 'w', encoding="utf-8") as f:
                 f.write(html)
-            print('        <airtest.report.report>report output_file',output_file)
+            #print('        <airtest.report.report>report output_file',output_file)
 
         return html
 
@@ -340,7 +341,7 @@ class LogToHtml(object):
         steps = self._analyse()
 
         script_path = os.path.join(self.script_root, self.script_name)
-        print('        <airtest.report.report>script_path:',script_path)
+        #print('        <airtest.report.report>script_path:',script_path)
         info = json.loads(get_script_info(script_path))
 
         if self.export_dir:
@@ -375,17 +376,17 @@ class LogToHtml(object):
 
 def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
     path, name = script_dir_name(filepath)
-    print('    report>script_dir: ',path)
+    print('***%s script_dir: %s' % (fname,path))
     if logpath is True:
         logpath = os.path.join(path, LOGDIR)
-        print('    report path LOGDIR: ',logpath)
+        print('***%s report/log dir: %s' % (fname,logpath))
     elif logpath:
         logpath = os.path.join(path, logpath)
-        print('    report path logpath: ',logpath)
+        print('***%s log path: %s' % (fname,logpath))
     if not os.path.exists(logpath):
         os.makedirs(logpath)
     output = os.path.join(logpath, output)
-    print('    report html path:',output)
+    print('***%s html report path: %s' % (fname,output))
     rpt = LogToHtml(path, logpath, logfile=logfile, script_name=name)
     rpt.report(HTML_TPL, output_file=output)
 

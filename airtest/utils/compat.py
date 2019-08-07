@@ -31,8 +31,8 @@ def script_log_dir(script_path, logdir):
     if logdir is True:
         logdir = os.path.join(script_path, DEFAULT_LOG_DIR)
     elif logdir:
-        print('    os.path.abspath(logdir):',os.path.abspath(logdir))
+        #print('    os.path.abspath(logdir):',os.path.abspath(logdir))
         logdir = os.path.abspath(logdir)
         logdir = decode_path(logdir)
-    print('    script_log_dir logdir:',logdir)
+    #print('    script_log_dir logdir:',logdir)
     return logdir

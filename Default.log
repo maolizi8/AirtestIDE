@@ -3400,3 +3400,13 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2019-08-07 10:15:09,118 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell am force-stop com.netease.open.pocoservice
 2019-08-07 10:15:10,036 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell am start -n com.netease.open.pocoservice/.TestActivity
 2019-08-07 10:15:10,880 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell am instrument -w -e debug false -e class com.netease.open.pocoservice.InstrumentedTestAsLauncher com.netease.open.pocoservice.test/android.support.test.runner.AndroidJUnitRunner
+2019-08-07 11:42:27,597 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -i
+2019-08-07 11:42:27,764 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1080x1920@1080x1920/0 -s
+2019-08-07 11:59:27,793 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:12266
+2019-08-07 11:59:27,801 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:14027
+2019-08-07 11:59:27,810 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:13187
+2019-08-07 11:59:27,820 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 46709b100104 forward --remove tcp:16822
+2019-08-07 11:59:27,847 - orientationWatcher has ended
+2019-08-07 11:59:37,535 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-07 15:45:02,690 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices
+2019-08-07 16:14:47,870 - E:\airtest_proj\AirtestIDE\airtest\core\android\static\adb\windows\adb.exe devices

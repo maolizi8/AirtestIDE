@@ -49,7 +49,6 @@ class G(object):
 helper functions
 """
 
-
 def set_logdir(dirpath):
     """set log dir for logfile and screenshots.
 
