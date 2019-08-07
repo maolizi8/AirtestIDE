@@ -7,9 +7,9 @@ from airtest.cli.runner import run_script
 from airtest.cli.parser import runner_parser
 from airtest.core.settings import Settings as ST
 
-if not globals().get("AirtestCase"):
-    from airtest.cli.runner import AirtestCase
-
+# if not globals().get("AirtestCase"):
+#     from airtest.cli.runner import AirtestCase
+from airtest.cli.runner import AirtestCase
 
 class CustomCase(AirtestCase):
     """Custom launcher."""
@@ -43,4 +43,8 @@ class CustomCase(AirtestCase):
 if __name__ == '__main__':
     ap = runner_parser()
     args = ap.parse_args()
+    print('custom args: ',args)
+    args.devices=[
+            "Android:///",
+    ]
     run_script(args, CustomCase)

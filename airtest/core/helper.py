@@ -60,6 +60,7 @@ def set_logdir(dirpath):
 
     """
     if not os.path.exists(dirpath):
+        print('    log dir not exists, creating...')
         os.mkdir(dirpath)
     ST.LOG_DIR = dirpath
     G.LOGGER.set_logfile(os.path.join(ST.LOG_DIR, ST.LOG_FILE))

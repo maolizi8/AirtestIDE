@@ -17,7 +17,6 @@ def imread(filename):
     else:
         filename = filename.encode(sys.getfilesystemencoding())
         img = cv2.imread(filename, 1)
-    print('    imread(filename)>img:',img)
     return img
 
 

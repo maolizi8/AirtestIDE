@@ -10,7 +10,6 @@ import shutil
 import jinja2
 import traceback
 from copy import deepcopy
-from datetime import datetime
 from jinja2 import evalcontextfilter, Markup, escape
 from airtest.aircv import imread, get_resolution
 from airtest.utils.compat import decode_path, script_dir_name
@@ -27,9 +26,6 @@ STATIC_DIR = os.path.dirname(__file__)
 
 _paragraph_re = re.compile(r'(?:\r\n|\r|\n){2,}')
 
-
-print('    airtest>report>report.py>>>')
-
 @evalcontextfilter
 def nl2br(eval_ctx, value):
     result = u'\n\n'.join(u'<p>%s</p>' % p.replace('\n', '<br>\n')
@@ -37,16 +33,6 @@ def nl2br(eval_ctx, value):
     if eval_ctx.autoescape:
         result = Markup(result)
     return result
-
-
-def timefmt(timestamp):
-    """
-    Formatting of timestamp in Jinja2 templates
-    :param timestamp: timestamp of steps
-    :return: "%Y-%m-%d %H:%M:%S"
-    """
-    return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S")
-
 
 class LogToHtml(object):
     """Convert log to html display """
@@ -79,9 +65,12 @@ class LogToHtml(object):
 
     def _load(self):
         logfile = self.logfile.encode(sys.getfilesystemencoding()) if not PY3 else self.logfile
-        with io.open(logfile, encoding="utf-8") as f:
-            for line in f.readlines():
-                self.log.append(json.loads(line))
+        print('    report logfile: ',logfile)
+        print('    report logfile exists: ',os.path.exists(logfile))
+        if os.path.exists(logfile):
+            with io.open(logfile, encoding="utf-8") as f:
+                for line in f.readlines():
+                    self.log.append(json.loads(line))
 
     def _analyse(self):
         """ 解析log成可渲染的dict """
@@ -131,7 +120,7 @@ class LogToHtml(object):
             "screen": screen,
             "desc": desc,
             "traceback": traceback,
-            "assert": assertion,
+            "assert": assertion
         }
         return translated
 
@@ -305,15 +294,13 @@ class LogToHtml(object):
             autoescape=True
         )
         env.filters['nl2br'] = nl2br
-        env.filters['datetime'] = timefmt
-        #env.filters['datetime'] = datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S")
         template = env.get_template(template_name)
         html = template.render(**template_vars)
-
+        print('    <airtest.report.report>report write(html)')
         if output_file:
             with io.open(output_file, 'w', encoding="utf-8") as f:
                 f.write(html)
-            print(output_file)
+            print('        <airtest.report.report>report output_file',output_file)
 
         return html
 
@@ -353,6 +340,7 @@ class LogToHtml(object):
         steps = self._analyse()
 
         script_path = os.path.join(self.script_root, self.script_name)
+        print('        <airtest.report.report>script_path:',script_path)
         info = json.loads(get_script_info(script_path))
 
         if self.export_dir:
@@ -387,8 +375,17 @@ class LogToHtml(object):
 
 def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
     path, name = script_dir_name(filepath)
+    print('    report>script_dir: ',path)
     if logpath is True:
         logpath = os.path.join(path, LOGDIR)
+        print('    report path LOGDIR: ',logpath)
+    elif logpath:
+        logpath = os.path.join(path, logpath)
+        print('    report path logpath: ',logpath)
+    if not os.path.exists(logpath):
+        os.makedirs(logpath)
+    output = os.path.join(logpath, output)
+    print('    report html path:',output)
     rpt = LogToHtml(path, logpath, logfile=logfile, script_name=name)
     rpt.report(HTML_TPL, output_file=output)
 

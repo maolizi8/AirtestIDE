@@ -40,12 +40,6 @@ def init_device(platform="Android", uuid=None, **kwargs):
         G.add_device(dev)
     return dev
 
-# def run_function(func, uri='Android:///', startapp=None, stop=False):
-#     """"""
-#     connect_device(uri)
-#     if startapp:
-#         start_app(startapp)
-#     func()
 
 def connect_device(uri):
     """
@@ -67,6 +61,7 @@ def connect_device(uri):
     if host:
         params["host"] = host.split(":")
     dev = init_device(platform, uuid, **params)
+    print('    dev:',dev)
     return dev
 
 
@@ -110,25 +105,31 @@ def auto_setup(basedir=None, devices=None, logdir=None, project_root=None):
     :param project_root: project root dir for `using` api.
     """
     if basedir:
+        
         if os.path.isfile(basedir):
-            filename,ext = os.path.splitext(basedir)
             # <GQL add>
-            print('    <gql> G.TEMPLATE')
-            temp_dir=os.path.join(basedir,filename)
-            if temp_dir not in G.TEMPLATE:
-                G.TEMPLATE.append(temp_dir)
+            #filename,ext = os.path.splitext(basedir)
+            #print('<gql> G.TEMPLATE')
+            #temp_dir=os.path.join(basedir,filename)
+            #if temp_dir not in G.TEMPLATE:
+            #    G.TEMPLATE.append(temp_dir)
+            
             basedir = os.path.dirname(basedir)
         if basedir not in G.BASEDIR:
             G.BASEDIR.append(basedir)
-#         if os.path.isfile(basedir):
-#             basedir = os.path.dirname(basedir)
-#         if basedir not in G.BASEDIR:
-#             G.BASEDIR.append(basedir)
+    
+    # <>
+#     if not devices:
+#         #devices=['android:///']
+#         devices=['Android://127.0.0.1:5037/46709b100104']
+#         #print('auto_setup: devices>',devices)    
+        
     if devices:
         for dev in devices:
             connect_device(dev)
     if logdir:
         logdir = script_log_dir(basedir, logdir)
+        print('    <airtest.core.api>logdir:',logdir)
         set_logdir(logdir)
     if project_root:
         ST.PROJECT_ROOT = project_root
@@ -224,8 +225,6 @@ def snapshot(filename=None, msg=""):
     :return: absolute path of the screenshot
     :platforms: Android, iOS, Windows
     """
-    
-    G.LOGGING.info('    snapshot>filename:',filename)
     if filename:
         if not os.path.isabs(filename):
             
@@ -235,7 +234,6 @@ def snapshot(filename=None, msg=""):
             filename = os.path.join(logdir, filename)
             print('  save snapshot:',filename)
         screen = G.DEVICE.snapshot(filename)
-        G.LOGGING.info('    snapshot>screen:',screen)
         return try_log_screen(screen)
     else:
         return try_log_screen()
@@ -276,8 +274,6 @@ def touch(v, times=1, **kwargs):
     :return: finial position to be clicked
     :platforms: Android, Windows, iOS
     """
-    print('    touch>v:',v)
-    G.LOGGING.info('    touch>v:',v)
     if isinstance(v, Template):
         pos = loop_find(v, timeout=ST.FIND_TIMEOUT)
     else:
@@ -389,6 +385,7 @@ def text(text, enter=True, **kwargs):
     :return: None
     :platforms: Android, Windows, iOS
     """
+    print('    输入：',text)
     G.DEVICE.text(text, enter=enter, **kwargs)
     delay_after_operation()
 

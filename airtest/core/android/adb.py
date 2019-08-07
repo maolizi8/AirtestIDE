@@ -57,6 +57,8 @@ class ADB(object):
         system = platform.system()
         machine = platform.machine()
         adb_path = DEFAULT_ADB_PATH.get('{}-{}'.format(system, machine))
+        
+        print('adb_path: ',adb_path)
         if not adb_path:
             adb_path = DEFAULT_ADB_PATH.get(system)
         if not adb_path:

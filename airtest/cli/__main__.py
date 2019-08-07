@@ -5,7 +5,6 @@ from airtest.cli.parser import get_parser
 def main(argv=None):
     ap = get_parser()
     args = ap.parse_args(argv)
-    print('--args.action: ',args.action)
     if args.action == "info":
         from airtest.cli.info import get_script_info
         print(get_script_info(args.script))

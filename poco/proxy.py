@@ -91,6 +91,8 @@ class UIObjectProxy(object):
     """
 
     def __init__(self, poco, name=None, **attrs):
+        
+        print('    poco>proxy--------')
         # query object in tuple
         self.query = build_query(name, **attrs)
         self.poco = poco
@@ -331,8 +333,15 @@ class UIObjectProxy(object):
         focus = focus or self._focus or 'anchor'
         pos_in_percentage = self.get_position(focus)
         self.poco.pre_action('click', self, pos_in_percentage)
-        if desc:
-            print('点击：',desc)
+        
+            
+        try:
+            description = self.get_text() or self.get_name()
+            print('    点击：', description)
+        except Exception as e:
+            if desc:
+                print('    执行点击：',desc)
+            print(e)
         ret = self.poco.click(pos_in_percentage)
         if sleep_interval:
             time.sleep(sleep_interval)
