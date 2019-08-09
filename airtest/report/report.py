@@ -372,6 +372,58 @@ class LogToHtml(object):
         data['info'] = info
 
         return self._render(template_name, output_file, **data)
+    
+    def report_custom(self, template_name, output_file=None, record_list=None):
+        self._load()
+        steps = self._analyse()
+
+        #script_path = os.path.join(self.script_root, self.script_name)
+        #info = json.loads(get_script_info(script_path))
+        #print('        <airtest.report.report>script_path:',script_path)
+        
+#         if self.export_dir:
+#             self.script_root, self.log_root = self._make_export_dir()
+#             output_file = os.path.join(self.script_root, HTML_FILE)
+#             if not self.static_root.startswith("http"):
+#                 self.static_root = "static/"
+
+        if not record_list:
+            record_list = [f for f in os.listdir(self.log_root) if f.endswith(".mp4")]
+        records = [os.path.join(LOGDIR, f) if self.export_dir
+                   else os.path.abspath(os.path.join(self.log_root, f)) for f in record_list]
+
+        if not self.static_root.endswith(os.path.sep):
+            self.static_root = self.static_root.replace("\\", "/")
+            self.static_root += "/"
+
+        data = {}
+        data['steps'] = steps
+        data['name'] = self.script_root
+        data['scale'] = self.scale
+        data['test_result'] = self.test_result
+        data['run_end'] = self.run_end
+        data['run_start'] = self.run_start
+        data['static_root'] = self.static_root
+        data['lang'] = self.lang
+        data['records'] = records
+        data['info'] = {"name": 'script_name', "author": 'author', "title": 'title', "desc": 'desc'}
+        
+        env = jinja2.Environment(
+            loader=jinja2.FileSystemLoader(STATIC_DIR),
+            extensions=(),
+            autoescape=True
+        )
+        env.filters['nl2br'] = nl2br
+        template = env.get_template(template_name)
+        html = template.render(**data)
+        #print('    <airtest.report.report>report write(html)')
+        if output_file:
+            with io.open(output_file, 'w', encoding="utf-8") as f:
+                f.write(html)
+            #print('        <airtest.report.report>report output_file',output_file)
+
+        return html
+        #return self._render(template_name, output_file, **data)
 
 
 def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
@@ -390,6 +442,14 @@ def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
     rpt = LogToHtml(path, logpath, logfile=logfile, script_name=name)
     rpt.report(HTML_TPL, output_file=output)
 
+def custom_report(case_name, logpath, logfile=LOGFILE, output=HTML_FILE):
+    print('***%s log dir: %s' % (case_name, logpath))
+    if not os.path.exists(logpath):
+        os.makedirs(logpath)
+    output = os.path.join(logpath, output)
+    print('***%s html report path: %s' % (fname,output))
+    rpt = LogToHtml(logpath, logpath, logfile=logfile)
+    rpt.report_custom(HTML_TPL, output_file=output)
 
 def get_parger(ap):
     ap.add_argument("script", help="script filepath")

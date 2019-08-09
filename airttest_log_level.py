@@ -5,4 +5,4 @@ Created on 2019年8月7日
 '''
 import logging
 
-log_level = logging.ERROR
+log_level = logging.INFO
