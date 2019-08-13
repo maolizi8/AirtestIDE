@@ -1,5 +1,5 @@
 import logging
-from airttest_log_level import log_level
+from airttest_settings import log_level
 
 def init_logging():
     # logger = logging.root

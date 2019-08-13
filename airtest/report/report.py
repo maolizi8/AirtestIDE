@@ -16,6 +16,7 @@ from airtest.utils.compat import decode_path, script_dir_name
 from airtest.cli.info import get_script_info
 from six import PY3
 from pprint import pprint
+from airttest_settings import jk_server
 
 fname = __name__
 LOGDIR = "log"
@@ -39,8 +40,13 @@ class LogToHtml(object):
     """Convert log to html display """
     scale = 0.5
 
-    def __init__(self, script_root, log_root="", static_root="", export_dir=None, script_name="", logfile=LOGFILE, lang="en", plugins=None):
+    def __init__(self, script_root, log_root="", static_root="", export_dir=None, 
+                 script_name="", logfile=LOGFILE, lang="en", plugins=None, 
+                 online_path=None,proj_name=None):
         self.log = []
+        self.online_path=online_path
+        self.proj_name=proj_name
+        
         self.script_root = script_root
         self.script_name = script_name
         self.log_root = log_root
@@ -104,9 +110,9 @@ class LogToHtml(object):
         """translate single step"""
         name = step["data"]["name"]
         title = self._translate_title(name, step)
-        code = self._translate_code(step)
+        code = self._translate_code(step)   #step.code.args.image
         desc = self._translate_desc(step, code)
-        screen = self._translate_screen(step, code)
+        screen = self._translate_screen(step, code) #step.screen.src
         traceback = self._translate_traceback(step)
         assertion = self._translate_assertion(step)
 
@@ -143,12 +149,19 @@ class LogToHtml(object):
         for item in step["__children__"]:
             if item["data"]["name"] == "try_log_screen" and isinstance(item["data"].get("ret", None), six.text_type):
                 src = item["data"]['ret']
+                print('    screen src:',src)
                 if self.export_dir:  # all relative path
                     src = os.path.join(LOGDIR, src)
                     screen['_filepath'] = src
                 else:
-                    screen['_filepath'] = os.path.abspath(os.path.join(self.log_root, src))
-                screen['src'] = screen['_filepath']
+                    if self.online_path:
+                        jk_logdir=self.log_root.split(self.proj_name)[1]
+                        screen_path = self.online_path + jk_logdir.replace('\\','/') + '/' + src
+                    else:
+                        screen['_filepath'] = os.path.abspath(os.path.join(self.log_root, src))
+                        screen_path = screen['_filepath']
+                print('    screen_path:',screen_path)
+                screen['src'] = screen_path
                 break
 
         display_pos = None
@@ -208,8 +221,14 @@ class LogToHtml(object):
                     if not os.path.isfile(os.path.join(self.script_root, image_path)):
                         shutil.copy(value['_filepath'], self.script_root)  # copy image used by using statement
                 else:
-                    image_path = os.path.abspath(value['_filepath'] or value['filename'])
+                    if self.online_path:
+                        _filepath = os.path.abspath(value['_filepath'])
+                        jk_filepath=_filepath.split(self.proj_name)[1]
+                        image_path = self.online_path+jk_filepath.replace('\\','/')
+                    else:
+                        image_path = os.path.abspath(value['_filepath'] or value['filename'])    
                 arg["image"] = image_path
+                print('    arg["image"]: ',arg["image"])
                 crop_img = imread(value['_filepath'] or value['filename'])
                 arg["resolution"] = get_resolution(crop_img)
         return code
@@ -389,14 +408,17 @@ class LogToHtml(object):
 
         if not record_list:
             record_list = [f for f in os.listdir(self.log_root) if f.endswith(".mp4")]
+        
         records = [os.path.join(LOGDIR, f) if self.export_dir
-                   else os.path.abspath(os.path.join(self.log_root, f)) for f in record_list]
-
+                       else os.path.abspath(os.path.join(self.log_root, f)) for f in record_list]
+        
+        
         if not self.static_root.endswith(os.path.sep):
             self.static_root = self.static_root.replace("\\", "/")
             self.static_root += "/"
 
         data = {}
+       
         data['steps'] = steps
         data['name'] = self.script_root
         data['scale'] = self.scale
@@ -442,13 +464,15 @@ def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
     rpt = LogToHtml(path, logpath, logfile=logfile, script_name=name)
     rpt.report(HTML_TPL, output_file=output)
 
-def custom_report(case_name, logpath, logfile=LOGFILE, output=HTML_FILE):
+def custom_report(case_name, logpath, logfile=LOGFILE, output=HTML_FILE, 
+                  online_path=None, proj_name=None, static_root=""):
     print('***%s log dir: %s' % (case_name, logpath))
     if not os.path.exists(logpath):
         os.makedirs(logpath)
     output = os.path.join(logpath, output)
     print('***%s html report path: %s' % (fname,output))
-    rpt = LogToHtml(logpath, logpath, logfile=logfile)
+    rpt = LogToHtml(logpath, logpath, logfile=logfile, 
+                    online_path=online_path, proj_name=proj_name, static_root=static_root)
     rpt.report_custom(HTML_TPL, output_file=output)
 
 def get_parger(ap):
