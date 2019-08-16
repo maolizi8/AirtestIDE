@@ -392,19 +392,9 @@ class LogToHtml(object):
 
         return self._render(template_name, output_file, **data)
     
-    def report_custom(self, template_name, output_file=None, record_list=None):
+    def report_custom(self, template_name, case_info, output_file=None, record_list=None):
         self._load()
         steps = self._analyse()
-
-        #script_path = os.path.join(self.script_root, self.script_name)
-        #info = json.loads(get_script_info(script_path))
-        #print('        <airtest.report.report>script_path:',script_path)
-        
-#         if self.export_dir:
-#             self.script_root, self.log_root = self._make_export_dir()
-#             output_file = os.path.join(self.script_root, HTML_FILE)
-#             if not self.static_root.startswith("http"):
-#                 self.static_root = "static/"
 
         if not record_list:
             record_list = [f for f in os.listdir(self.log_root) if f.endswith(".mp4")]
@@ -420,7 +410,7 @@ class LogToHtml(object):
         data = {}
        
         data['steps'] = steps
-        data['name'] = self.script_root
+        data['name'] = case_info['name']
         data['scale'] = self.scale
         data['test_result'] = self.test_result
         data['run_end'] = self.run_end
@@ -428,7 +418,8 @@ class LogToHtml(object):
         data['static_root'] = self.static_root
         data['lang'] = self.lang
         data['records'] = records
-        data['info'] = {"name": 'script_name', "author": 'author', "title": 'title', "desc": 'desc'}
+        data['info'] = case_info
+        #
         
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader(STATIC_DIR),
@@ -464,16 +455,16 @@ def simple_report(filepath, logpath=True, logfile=LOGFILE, output=HTML_FILE):
     rpt = LogToHtml(path, logpath, logfile=logfile, script_name=name)
     rpt.report(HTML_TPL, output_file=output)
 
-def custom_report(case_name, logpath, logfile=LOGFILE, output=HTML_FILE, 
+def custom_report(case_info, logpath, logfile=LOGFILE, output=HTML_FILE, 
                   online_path=None, proj_name=None, static_root=""):
-    print('***%s log dir: %s' % (case_name, logpath))
+    print('*** %s *** log dir: %s' % (case_info['name'], logpath))
     if not os.path.exists(logpath):
         os.makedirs(logpath)
     output = os.path.join(logpath, output)
     print('***%s html report path: %s' % (fname,output))
     rpt = LogToHtml(logpath, logpath, logfile=logfile, 
                     online_path=online_path, proj_name=proj_name, static_root=static_root)
-    rpt.report_custom(HTML_TPL, output_file=output)
+    rpt.report_custom(HTML_TPL, case_info=case_info, output_file=output)
 
 def get_parger(ap):
     ap.add_argument("script", help="script filepath")

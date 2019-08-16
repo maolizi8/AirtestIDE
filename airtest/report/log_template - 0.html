@@ -251,27 +251,31 @@
           {% endif %}
 
           <div class="material moa" >
-			<h3><span lang="en">测试结果: </span>
-			  {% if test_result %}
-			  <label class="green" lang="en">[Passed]</label>
-			  {% else %}
-			  <label class="red" lang="en">[Failed]</label>
-			  {% endif %}
-			</h3>
-			{% if info.desc %}
-			<h3 lang="en">用例描述：</h3>
-			<div class="airdesc-wrap">
-				<div class="airdesc">
-				  <div class="desc-content">{{ info.desc| nl2br }}</div>
-				</div>
-			</div>
-			{% endif %}
-			<h4><span lang="en">测试脚本：</span> {{ info.name }}</h4>
+              <h2><span lang="en">Test Case</span> {{info.name}}
+              {% if test_result %}
+              <label class="green" lang="en">[Passed]</label>
+              {% else %}
+              <label class="red" lang="en">[Failed]</label>
+              {% endif %}
+            </h2>
             {% if info.author %}
-                <h4><span lang="en">开发者：</span> {{info.author}}</h4>
+                <h4><span lang="en">Author:</span> {{info.author}}</h4>
+            {% else %}
+            <h4 lang="en">Author: Anonymous</h4>
             {% endif %}
-            
-            <h4><span lang="en">运行时间：</span>{{run_start}} -- {{run_end}}</h4>
+            {% if info.title %}
+                <h4><span lang="en">Title:</span> {{info.title}}</h4>
+            {% endif %}
+            {% if info.desc %}
+                <h4 lang="en">Description:</h4>
+                 <div class="airdesc-wrap">
+                    <div class="airdesc">
+                      <div class="desc-content">{{ info.desc| nl2br }}</div>
+                    </div>
+                    <div href="javascript:void(0);" class="glyphicon glyphicon-chevron-down"></div>
+                </div>
+            {% endif %}
+            <h4><span lang="en">Time:</span>{{run_start}} -- {{run_end}}</h4>
 
             {% if not test_result %}
             <h2 class="danger" lang="en">Failure: Failed Steps</h2>
@@ -284,7 +288,7 @@
             </div>
             {% endif %}
 
-            <!-- <h2 class="header" lang="en">Assert: Test Steps Summary</h2>
+            <h2 class="header" lang="en">Assert: Test Steps Summary</h2>
             <hr>
             <div class="row">
             {% for step in steps %}
@@ -301,29 +305,30 @@
               {% endif %}
             {% endfor %}
             </div>
-			
-          </div> -->
+          </div>
 
           <!-- 录屏 -->
-		  {% if records %}
           <div class="row gif-wrap">
-			  <div class="col-md-6">
-				  {% for r in records %}
-					<div align="center" class="embed-responsive embed-responsive-16by9">
-						<video class="embed-responsive-item" controls>
-							<source src="{{ r }}" type="video/mp4">
-						</video>
-					</div>
-				  {% endfor %}
-			  </div>
+          <div class="col-md-6">
+            {% if records %}
+              {% for r in records %}
+                <div align="center" class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="{{ r }}" type="video/mp4">
+                    </video>
+                </div>
+              {% endfor %}
+            {% else %}
+              <p lang="en">No record information found.</p>
+            {% endif %}
           </div>
-		  {% endif %}
+          </div>
 
           <!--单步-->
           {% for step in steps %}
           <div class="material moa main_script" data-trace="{{step.traceback}}" id="main_script_{{loop.index}}">
 
-            <h2 class="header">[Step {{loop.index}}]： <span class="step_title" lang="en">{{step.title}}</span> <span class="step_title">[{{step.time}}]</span></h2>
+            <h2 class="header">Step {{loop.index}} <span class="step_title" lang="en">{{step.title}}</span> <span class="step_title">[{{step.time}}]</span></h2>
             <hr>
             <div class="step_content">
               <!--单步操作-->
