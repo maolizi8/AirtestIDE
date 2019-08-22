@@ -7,5 +7,5 @@ import logging
 
 log_level = logging.INFO
 
-jk_server = 'http://xx.xxx.xx.x:8080/jenkins/'
-static_server = 'http://xx.xx.xx.xx/'
+jk_server = 'http://yyw-0345:8080/jenkins/'
+static_server = 'http://yyw-0345.yw.local/'
